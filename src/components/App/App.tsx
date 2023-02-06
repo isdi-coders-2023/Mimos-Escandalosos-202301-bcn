@@ -1,6 +1,8 @@
-import "./index.css";
+import getApiData from "../../getApiData/getApiData";
 
-function App() {
+const App = () => {
+  getApiData();
+
   return (
     <div className="App">
       <iframe
@@ -14,6 +16,6 @@ function App() {
       <span>Under construction. Coming soon.</span>
     </div>
   );
-}
+};
 
 export default App;
