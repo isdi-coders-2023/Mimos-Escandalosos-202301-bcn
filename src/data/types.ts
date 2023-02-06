@@ -1,4 +1,4 @@
-interface useApiStructure {
+interface ApiStructure {
   hits: [
     {
       recipe: {
@@ -44,4 +44,4 @@ interface useApiStructure {
   ];
 }
 
-export default useApiStructure;
+export default ApiStructure;
