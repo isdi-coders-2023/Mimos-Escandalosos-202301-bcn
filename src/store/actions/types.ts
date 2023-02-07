@@ -20,10 +20,10 @@ export interface EditMealAction extends MealsAction {
   payload: MealStructure;
 }
 
-export interface RemoveMeal {
+export interface RemoveMealAction extends MealsAction {
   payload: MealStructure;
 }
 
-export interface toggleMeal extends MealsAction {
+export interface ToggleMealAction extends MealsAction {
   payload: MealStructure;
 }

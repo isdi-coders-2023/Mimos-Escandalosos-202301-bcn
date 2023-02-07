@@ -41,8 +41,3 @@ export interface MealStructure {
 }
 
 export type MealsStructure = MealStructure[];
-
-export interface ButtonProps {
-  className: string;
-  action: () => void;
-}
