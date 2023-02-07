@@ -1,8 +1,8 @@
 import { createContext } from "react";
-import MealsInfoStructure from "../../data/types";
+import { MealStructure } from "../../data/types";
 
 interface MealsInfoContextStructure {
-  meals: MealsInfoStructure;
+  meals: MealStructure;
   dispatch: React.Dispatch<any>;
 }
 
