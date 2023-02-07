@@ -1,4 +1,4 @@
-interface PaginationStructure {
+export interface PaginationStructure {
   self: {
     href: string;
     title: string;
@@ -58,9 +58,8 @@ interface RecipeStructure {
   totalNutrients: TotalNutrientsStructure;
 }
 
-interface MealStructure {
-  _links: PaginationStructure;
+export interface MealStructure {
   recipe: RecipeStructure;
 }
 
-export default MealStructure;
+export type MealsStructure = MealStructure[];
