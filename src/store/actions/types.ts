@@ -1,6 +1,7 @@
-import { MealStructure } from "../../data/types";
+import { MealsStructure, MealStructure } from "../../data/types";
 
 export enum MealsActionType {
+  loadMeals,
   addMeal,
   editMeal,
   removeMeal,
@@ -10,6 +11,9 @@ export enum MealsActionType {
 export interface MealsAction {
   type: MealsActionType;
   payload: unknown;
+}
+export interface LoadMealsAction extends MealsAction {
+  payload: MealsStructure;
 }
 
 export interface AddMealAction extends MealsAction {
