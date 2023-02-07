@@ -14,7 +14,7 @@ describe("Given a loadMealsActionCreations function", () => {
             label: "Rice and chicken",
             image: "",
             images: {
-              SMALL: {
+              LARGE: {
                 url: "",
               },
             },
@@ -55,7 +55,7 @@ describe("Given a loadMealsActionCreations function", () => {
             label: "Tomatoe salad",
             image: "",
             images: {
-              SMALL: {
+              LARGE: {
                 url: "",
               },
             },
