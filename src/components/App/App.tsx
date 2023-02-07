@@ -1,5 +1,3 @@
-import MealForm from "../Form/MealForm";
-
 import getApiData from "../../getApiData/getApiData";
 import Card from "../Card/Card";
 
@@ -9,7 +7,6 @@ const App = () => {
   return (
     <div className="App">
       <Card />
-      <MealForm />
     </div>
   );
 };
