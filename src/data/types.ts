@@ -1,4 +1,4 @@
-interface ApiStructure {
+interface MealsInfoStructure {
   hits: [
     {
       recipe: {
@@ -44,4 +44,4 @@ interface ApiStructure {
   ];
 }
 
-export default ApiStructure;
+export default MealsInfoStructure;
