@@ -10,7 +10,7 @@ describe("Given a addMealActionCreators function", () => {
           label: "Rice and chicken",
           image: "",
           images: {
-            SMALL: {
+            LARGE: {
               url: "",
             },
           },
