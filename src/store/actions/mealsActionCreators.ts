@@ -1,11 +1,19 @@
-import { MealStructure } from "../../data/types";
+import { MealsStructure, MealStructure } from "../../data/types";
 import {
   AddMealAction,
   EditMealAction,
+  LoadMealsAction,
   MealsActionType,
   RemoveMealAction,
   ToggleMealAction,
 } from "./types";
+
+export const loadMealsActionCreator = (
+  meals: MealsStructure
+): LoadMealsAction => ({
+  type: MealsActionType.loadMeals,
+  payload: meals,
+});
 
 export const addMealActionCreator = (meal: MealStructure): AddMealAction => ({
   type: MealsActionType.addMeal,
