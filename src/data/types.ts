@@ -1,4 +1,4 @@
-interface MealsInfoStructure {
+export interface MealStructure {
   hits: [
     {
       recipe: {
@@ -44,4 +44,9 @@ interface MealsInfoStructure {
   ];
 }
 
-export default MealsInfoStructure;
+export type MealsStructure = MealStructure[];
+
+export interface ButtonProps {
+  className: string;
+  action: () => void;
+}
