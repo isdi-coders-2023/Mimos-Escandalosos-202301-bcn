@@ -5,7 +5,7 @@ import {
   LoadMealsAction,
   MealsActionType,
   RemoveMealAction,
-  ToggleMealAction,
+  AddFavouriteMealAction,
 } from "./types";
 
 export const loadMealsActionCreator = (
@@ -32,9 +32,9 @@ export const removeMealActionCreator = (
   payload: meal,
 });
 
-export const toggleMealActionCreator = (
+export const addFavouriteMealActionCreator = (
   meal: MealStructure
-): ToggleMealAction => ({
+): AddFavouriteMealAction => ({
   type: MealsActionType.toggleMeal,
   payload: meal,
 });

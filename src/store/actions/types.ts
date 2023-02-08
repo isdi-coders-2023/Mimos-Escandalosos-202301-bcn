@@ -28,6 +28,6 @@ export interface RemoveMealAction extends MealsAction {
   payload: MealStructure;
 }
 
-export interface ToggleMealAction extends MealsAction {
+export interface AddFavouriteMealAction extends MealsAction {
   payload: MealStructure;
 }
