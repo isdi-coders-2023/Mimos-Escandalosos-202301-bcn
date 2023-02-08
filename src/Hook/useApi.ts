@@ -1,7 +1,7 @@
 import { useCallback, useContext } from "react";
-import MealsInfoContext from "../contexts/MealsInfoContext/MealsInfoContext";
 import { MealsStructure } from "../data/types";
 import { loadMealsActionCreator } from "../store/actions/mealsActionCreators";
+import MealsInfoContext from "../store/contexts/MealsInfoContext/MealsInfoContext";
 
 export const useApi = () => {
   const { dispatch } = useContext(MealsInfoContext);
