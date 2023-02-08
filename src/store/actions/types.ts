@@ -5,7 +5,7 @@ export enum MealsActionType {
   addMeal,
   updateMeal,
   removeMeal,
-  toggleMeal,
+  addFavouriteMeal,
 }
 
 export interface MealsAction {

@@ -35,6 +35,6 @@ export const removeMealActionCreator = (
 export const addFavouriteMealActionCreator = (
   meal: MealStructure
 ): AddFavouriteMealAction => ({
-  type: MealsActionType.toggleMeal,
+  type: MealsActionType.addFavouriteMeal,
   payload: meal,
 });
