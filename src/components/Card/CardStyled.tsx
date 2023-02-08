@@ -8,7 +8,7 @@ const CardStyled = styled.li`
   .meal {
     display: flex;
     background-color: #f6f6f6;
-    padding: 10px;
+    padding: 20px;
     margin: 10px 0;
     font-size: 10px;
     border-radius: 15px;
@@ -26,8 +26,8 @@ const CardStyled = styled.li`
 
     @media (min-width: 600px) {
       img {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
       }
     }
 
@@ -38,6 +38,7 @@ const CardStyled = styled.li`
     &__data {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       padding-left: 5px;
       gap: 5px;
     }
@@ -62,6 +63,7 @@ const CardStyled = styled.li`
     }
 
     &__cuisine-type {
+      display: flex;
       color: black;
       font-size: 14px;
     }

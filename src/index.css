@@ -1,12 +1,4 @@
-body {
-  margin: 0;
-}
-
-.giphy-embed {
-  border-radius: 30px;
-}
-
 .App {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
