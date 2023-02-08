@@ -1,13 +1,21 @@
 import { MealsStructure, MealStructure } from "../../data/types";
 import {
   addMealActionCreator,
+  editMealActionCreator,
   loadMealsActionCreator,
+  removeMealActionCreator,
 } from "./mealsActionCreators";
-import { AddMealAction, LoadMealsAction, MealsActionType } from "./types";
+import {
+  AddMealAction,
+  EditMealAction,
+  LoadMealsAction,
+  MealsActionType,
+  RemoveMealAction,
+} from "./types";
 
-describe("Given a loadMealsActionCreations function", () => {
+describe("Given a loadMealsActionCreator function", () => {
   describe("When it receives a list of two meals", () => {
-    test("Then it should return an action with type 'loadMeals' and the two meals as payload", () => {
+    test("Then it should return an action typed 'loadMeals' and the two meals as payload", () => {
       const meals: MealsStructure = [
         {
           recipe: {
@@ -105,9 +113,9 @@ describe("Given a loadMealsActionCreations function", () => {
   });
 });
 
-describe("Given a addMealActionCreators function", () => {
+describe("Given an addMealActionCreator function", () => {
   describe("When it receives a meal", () => {
-    test("Then it should return an action with type 'addMeal' and the meal as payload", () => {
+    test("Then it should return an action typed 'addMeal' and the meal as payload", () => {
       const meal: MealStructure = {
         recipe: {
           label: "Rice and chicken",
@@ -150,14 +158,128 @@ describe("Given a addMealActionCreators function", () => {
         },
       };
 
-      const expectedMealAction: AddMealAction = {
+      const expectedActionAndMeal: AddMealAction = {
         type: MealsActionType.addMeal,
         payload: meal,
       };
 
       const addMealAction = addMealActionCreator(meal);
 
-      expect(addMealAction).toStrictEqual(expectedMealAction);
+      expect(addMealAction).toStrictEqual(expectedActionAndMeal);
+    });
+  });
+});
+
+describe("Given a editMealActionCreation function", () => {
+  describe("When it receives a meal", () => {
+    test("Then it should return an action typed 'editMeal' and the meal as a payload", () => {
+      const meal: MealStructure = {
+        recipe: {
+          label: "Rice and chicken",
+          image: "",
+          images: {
+            LARGE: {
+              url: "",
+            },
+          },
+          ingredientLines: [],
+          calories: 200,
+          cuisineType: [],
+          totalNutrients: {
+            FAT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOCDF: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            SUGAR: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            PROCNT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOLE: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+          },
+        },
+      };
+
+      const expectedActionAndMeal: EditMealAction = {
+        type: MealsActionType.updateMeal,
+        payload: meal,
+      };
+
+      const editMealAction = editMealActionCreator(meal);
+
+      expect(editMealAction).toStrictEqual(expectedActionAndMeal);
+    });
+  });
+});
+
+describe("Given a removeMealActionCreation function", () => {
+  describe("When it receives a meal", () => {
+    test("Then it should return an action typed 'removeMeal' and the meal as payload", () => {
+      const meal: MealStructure = {
+        recipe: {
+          label: "Rice and chicken",
+          image: "",
+          images: {
+            LARGE: {
+              url: "",
+            },
+          },
+          ingredientLines: [],
+          calories: 200,
+          cuisineType: [],
+          totalNutrients: {
+            FAT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOCDF: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            SUGAR: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            PROCNT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOLE: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+          },
+        },
+      };
+
+      const expectedActionAndMeal: RemoveMealAction = {
+        type: MealsActionType.removeMeal,
+        payload: meal,
+      };
+
+      const removeMealAction = removeMealActionCreator(meal);
+
+      expect(removeMealAction).toStrictEqual(expectedActionAndMeal);
     });
   });
 });
