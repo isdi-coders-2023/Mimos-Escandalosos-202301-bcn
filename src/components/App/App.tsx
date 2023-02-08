@@ -1,12 +1,14 @@
 import MealForm from "../Form/MealForm";
 import Card from "../Card/Card";
+import Header from "../Header/Header";
 
 const App = () => {
   return (
-    <div className="App">
+    <>
+      <Header />
       <Card />
       <MealForm />
-    </div>
+    </>
   );
 };
 
