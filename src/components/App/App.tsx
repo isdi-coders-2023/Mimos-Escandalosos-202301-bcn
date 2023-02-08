@@ -1,13 +1,5 @@
-import MealForm from "../Form/MealForm";
-import Card from "../Card/Card";
-
 const App = () => {
-  return (
-    <div className="App">
-      <Card />
-      <MealForm />
-    </div>
-  );
+  return <div className="App"></div>;
 };
 
 export default App;

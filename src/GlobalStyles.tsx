@@ -2,8 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   body {
-    margin: 0;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 0;
     background-color: #fff;
     font-family: "Inter", sans-serif;
     min-width: 100vw;
