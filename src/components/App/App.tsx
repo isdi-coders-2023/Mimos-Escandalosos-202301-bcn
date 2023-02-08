@@ -1,14 +1,11 @@
 import getApiData from "../../getApiData/getApiData";
-import Card from "../Card/Card";
+
+import MealForm from "../Form/MealForm";
 
 const App = () => {
   getApiData();
 
-  return (
-    <div className="App">
-      <Card />
-    </div>
-  );
+  return <MealForm />;
 };
 
 export default App;
