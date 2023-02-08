@@ -6,7 +6,9 @@ describe("Given a Card component", () => {
     test("Then it should show a header2", () => {
       render(<Card />);
 
-      screen.getByRole("heading", { level: 2 });
+      const heading = screen.getByRole("heading", { level: 2 });
+
+      expect(heading).toBeInTheDocument();
     });
   });
 });
