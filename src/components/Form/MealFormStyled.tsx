@@ -6,20 +6,28 @@ const MealFormStyled = styled.form`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  min-width: 100vw;
   padding: 20px 0;
 
-  input,
-  select {
+  @media (min-width: 800px) {
+    width: 800px;
+    align-self: center;
+  }
+
+  input {
     border: 2px solid #c1c1c1;
     border-radius: 10px;
     background: #f1f1f1;
-    width: 100%;
     height: 35px;
+    width: 100%;
+    padding: 0 6px;
   }
 
   input::placeholder {
     padding: 0 6px;
+  }
+
+  input:focus {
+    border-color: #edb14d;
   }
 
   .form-meal {
@@ -37,7 +45,7 @@ const MealFormStyled = styled.form`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 
     &__kcal {
       width: 130px;
@@ -46,18 +54,21 @@ const MealFormStyled = styled.form`
 
     &__type {
       width: 130px;
-      height: 40px;
+      height: 35px;
+      border: 2px solid #c1c1c1;
+      border-radius: 10px;
+      background: #f1f1f1;
     }
 
     @media (min-width: 800px) {
       &__kcal {
-        width: 645px;
-        height: 50px;
+        width: 350px;
+        height: 35px;
       }
 
       &__type {
-        width: 645px;
-        height: 50px;
+        width: 350px;
+        height: 35px;
       }
     }
   }
@@ -66,8 +77,12 @@ const MealFormStyled = styled.form`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 100vw;
     padding-right: 4px;
+    width: 352px;
+
+    @media (min-width: 800px) {
+      min-width: 100%;
+    }
   }
 
   .nutrients-info {
@@ -80,6 +95,23 @@ const MealFormStyled = styled.form`
   .nutrient {
     width: 100px;
     height: 30px;
+  }
+
+  .submit {
+    display: flex;
+    &__button {
+      width: 350px;
+      height: 35px;
+      border: none;
+      border-radius: 10px;
+      background-color: #df5c37;
+      color: #fff;
+    }
+
+    @media (min-width: 800px) {
+      min-width: 100%;
+      justify-content: flex-end;
+    }
   }
 `;
 
