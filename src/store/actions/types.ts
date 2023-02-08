@@ -3,7 +3,7 @@ import { MealsStructure, MealStructure } from "../../data/types";
 export enum MealsActionType {
   loadMeals,
   addMeal,
-  editMeal,
+  updateMeal,
   removeMeal,
   toggleMeal,
 }
