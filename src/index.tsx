@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./components/App/App";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fontsource/inter";
 import GlobalStyles from "./GlobalStyles";
+import { MealsInfoContextProvider } from "./contexts/MealsInfoContext/MealsInfoContextProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,6 +13,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <MealsInfoContextProvider>
+      <App />
+    </MealsInfoContextProvider>
   </React.StrictMode>
 );

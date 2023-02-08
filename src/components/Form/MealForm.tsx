@@ -9,6 +9,7 @@ const MealForm = (): JSX.Element => {
           type="text"
           aria-label="Meal name"
           placeholder="Meal name"
+          required
         />
         <div className="form-meal__nutrients nutrients">
           <div className="nutrients-card__info">
@@ -17,11 +18,13 @@ const MealForm = (): JSX.Element => {
               type="text"
               aria-label="Kcal"
               placeholder="Kcal"
+              required
             />
             <select
               className="nutrients__type"
               name="Cuisine type"
               id="type-select"
+              required
             >
               Cuisine type
             </select>
@@ -32,6 +35,7 @@ const MealForm = (): JSX.Element => {
               type="text"
               aria-label="Fat"
               placeholder="Fat"
+              required
             />
             <span>mg</span>
           </div>
@@ -41,6 +45,7 @@ const MealForm = (): JSX.Element => {
               type="text"
               aria-label="Sugar"
               placeholder="Sugar"
+              required
             />
             <span>mg</span>
           </div>
@@ -50,6 +55,7 @@ const MealForm = (): JSX.Element => {
               type="text"
               aria-label="Carbs"
               placeholder="Carbs"
+              required
             />
             <span>mg</span>
           </div>
@@ -59,6 +65,7 @@ const MealForm = (): JSX.Element => {
               type="text"
               aria-label="Colesterol"
               placeholder="Colesterol"
+              required
             />
             <span>mg</span>
           </div>
@@ -68,6 +75,7 @@ const MealForm = (): JSX.Element => {
               type="text"
               aria-label="Proteins"
               placeholder="Proteins"
+              required
             />
             <span>mg</span>
           </div>
@@ -77,14 +85,18 @@ const MealForm = (): JSX.Element => {
           type="text"
           aria-label="Ingredients"
           placeholder="Ingredients"
+          required
         />
         <input
           className="form-meal__image"
-          type="image"
+          type="text"
           aria-label="Meal image"
           placeholder="Add your image"
+          required
         />
-        <button className="submit-form">Create meal</button>
+        <div className="form-meal__submit submit">
+          <button className="submit__button">Create meal</button>
+        </div>
       </MealFormStyled>
     </>
   );
