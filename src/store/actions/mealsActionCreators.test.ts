@@ -1,11 +1,13 @@
 import { MealsStructure, MealStructure } from "../../data/types";
 import {
+  addFavouriteMealActionCreator,
   addMealActionCreator,
   editMealActionCreator,
   loadMealsActionCreator,
   removeMealActionCreator,
 } from "./mealsActionCreators";
 import {
+  AddFavouriteMealAction,
   AddMealAction,
   EditMealAction,
   LoadMealsAction,
@@ -170,7 +172,7 @@ describe("Given an addMealActionCreator function", () => {
   });
 });
 
-describe("Given a editMealActionCreation function", () => {
+describe("Given a editMealActionCreator function", () => {
   describe("When it receives a meal", () => {
     test("Then it should return an action typed 'editMeal' and the meal as a payload", () => {
       const meal: MealStructure = {
@@ -227,7 +229,7 @@ describe("Given a editMealActionCreation function", () => {
   });
 });
 
-describe("Given a removeMealActionCreation function", () => {
+describe("Given a removeMealActionCreator function", () => {
   describe("When it receives a meal", () => {
     test("Then it should return an action typed 'removeMeal' and the meal as payload", () => {
       const meal: MealStructure = {
@@ -280,6 +282,63 @@ describe("Given a removeMealActionCreation function", () => {
       const removeMealAction = removeMealActionCreator(meal);
 
       expect(removeMealAction).toStrictEqual(expectedActionAndMeal);
+    });
+  });
+});
+
+describe("Given a addFavouriteMealActionCreator function", () => {
+  describe("When it receives a meal", () => {
+    test("Then it should return an action typed 'addFavouriteMeal' and the meal as payload", () => {
+      const meal: MealStructure = {
+        recipe: {
+          label: "Rice and chicken",
+          image: "",
+          images: {
+            LARGE: {
+              url: "",
+            },
+          },
+          ingredientLines: [],
+          calories: 200,
+          cuisineType: [],
+          totalNutrients: {
+            FAT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOCDF: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            SUGAR: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            PROCNT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOLE: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+          },
+        },
+      };
+
+      const expectedActionAndMeal: AddFavouriteMealAction = {
+        type: MealsActionType.addFavouriteMeal,
+        payload: meal,
+      };
+
+      const addFavouriteMealAction = addFavouriteMealActionCreator(meal);
+
+      expect(addFavouriteMealAction).toStrictEqual(expectedActionAndMeal);
     });
   });
 });
