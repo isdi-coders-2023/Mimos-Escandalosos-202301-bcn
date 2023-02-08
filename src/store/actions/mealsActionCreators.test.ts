@@ -1,11 +1,13 @@
 import { MealsStructure, MealStructure } from "../../data/types";
 import {
   addMealActionCreator,
+  editMealActionCreator,
   loadMealsActionCreator,
   removeMealActionCreator,
 } from "./mealsActionCreators";
 import {
   AddMealAction,
+  EditMealAction,
   LoadMealsAction,
   MealsActionType,
   RemoveMealAction,
@@ -164,6 +166,63 @@ describe("Given an addMealActionCreator function", () => {
       const addMealAction = addMealActionCreator(meal);
 
       expect(addMealAction).toStrictEqual(expectedActionAndMeal);
+    });
+  });
+});
+
+describe("Given a editMealActionCreation function", () => {
+  describe("When it receives a meal", () => {
+    test("Then it should return an action typed 'editMeal' and the meal as a payload", () => {
+      const meal: MealStructure = {
+        recipe: {
+          label: "Rice and chicken",
+          image: "",
+          images: {
+            LARGE: {
+              url: "",
+            },
+          },
+          ingredientLines: [],
+          calories: 200,
+          cuisineType: [],
+          totalNutrients: {
+            FAT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOCDF: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            SUGAR: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            PROCNT: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+            CHOLE: {
+              label: "",
+              quantity: 2,
+              unit: "mg",
+            },
+          },
+        },
+      };
+
+      const expectedActionAndMeal: EditMealAction = {
+        type: MealsActionType.updateMeal,
+        payload: meal,
+      };
+
+      const editMealAction = editMealActionCreator(meal);
+
+      expect(editMealAction).toStrictEqual(expectedActionAndMeal);
     });
   });
 });
