@@ -21,7 +21,7 @@ export const addMealActionCreator = (meal: MealStructure): AddMealAction => ({
 });
 
 export const editMealActionCreator = (meal: MealStructure): EditMealAction => ({
-  type: MealsActionType.editMeal,
+  type: MealsActionType.updateMeal,
   payload: meal,
 });
 
