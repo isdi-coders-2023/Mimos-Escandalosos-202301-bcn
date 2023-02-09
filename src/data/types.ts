@@ -50,6 +50,7 @@ export interface TotalNutrientsStructure {
 }
 
 export interface RecipeStructure {
+  id: string;
   label: string;
   image: string;
   images: ImageStructure;
