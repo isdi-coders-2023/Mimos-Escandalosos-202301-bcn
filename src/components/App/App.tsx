@@ -1,6 +1,6 @@
 import MealForm from "../Form/MealForm";
 import Header from "../Header/Header";
-import { useApi } from "../../Hook/useApi";
+import { useApi } from "../../hooks/useApi";
 import { useContext, useEffect } from "react";
 import MealsInfoContext from "../../store/contexts/MealsInfoContext/MealsInfoContext";
 import CardList from "../CardList/CardList";

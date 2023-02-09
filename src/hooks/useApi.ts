@@ -1,5 +1,6 @@
 import { useCallback, useContext } from "react";
 import { ApiResponseStructure } from "../data/types";
+
 import { loadMealsActionCreator } from "../store/actions/mealsActionCreators";
 import MealsInfoContext from "../store/contexts/MealsInfoContext/MealsInfoContext";
 

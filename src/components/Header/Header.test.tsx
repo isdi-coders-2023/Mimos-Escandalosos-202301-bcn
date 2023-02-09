@@ -18,5 +18,13 @@ describe("Given a Header component", () => {
 
       expect(imageLogo).toBeInTheDocument();
     });
+
+    test("Then it should show a Home pagen", () => {
+      render(<Header />);
+
+      const imageLogo = screen.getByRole("img");
+
+      expect(imageLogo).toBeInTheDocument();
+    });
   });
 });
