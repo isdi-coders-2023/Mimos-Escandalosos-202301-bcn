@@ -29,7 +29,6 @@ body {
 ol, ul, li {
   list-style: none;
 }
-
 `;
 
 export default GlobalStyles;
