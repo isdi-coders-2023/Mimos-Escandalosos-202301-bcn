@@ -15,6 +15,48 @@ import {
   RemoveMealAction,
 } from "./types";
 
+const meal: MealStructure = {
+  recipe: {
+    label: "Rice and chicken",
+    image: "",
+    images: {
+      LARGE: {
+        url: "",
+      },
+    },
+    ingredientLines: [],
+    calories: 200,
+    cuisineType: [],
+    totalNutrients: {
+      FAT: {
+        label: "",
+        quantity: 2,
+        unit: "mg",
+      },
+      CHOCDF: {
+        label: "",
+        quantity: 2,
+        unit: "mg",
+      },
+      SUGAR: {
+        label: "",
+        quantity: 2,
+        unit: "mg",
+      },
+      PROCNT: {
+        label: "",
+        quantity: 2,
+        unit: "mg",
+      },
+      CHOLE: {
+        label: "",
+        quantity: 2,
+        unit: "mg",
+      },
+    },
+  },
+};
+
 describe("Given a loadMealsActionCreator function", () => {
   describe("When it receives a list of two meals", () => {
     test("Then it should return an action typed 'loadMeals' and the two meals as payload", () => {
@@ -118,48 +160,6 @@ describe("Given a loadMealsActionCreator function", () => {
 describe("Given an addMealActionCreator function", () => {
   describe("When it receives a meal", () => {
     test("Then it should return an action typed 'addMeal' and the meal as payload", () => {
-      const meal: MealStructure = {
-        recipe: {
-          label: "Rice and chicken",
-          image: "",
-          images: {
-            LARGE: {
-              url: "",
-            },
-          },
-          ingredientLines: [],
-          calories: 200,
-          cuisineType: [],
-          totalNutrients: {
-            FAT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOCDF: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            SUGAR: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            PROCNT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOLE: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-          },
-        },
-      };
-
       const expectedActionAndMeal: AddMealAction = {
         type: MealsActionType.addMeal,
         payload: meal,
@@ -175,48 +175,6 @@ describe("Given an addMealActionCreator function", () => {
 describe("Given a editMealActionCreator function", () => {
   describe("When it receives a meal", () => {
     test("Then it should return an action typed 'editMeal' and the meal as a payload", () => {
-      const meal: MealStructure = {
-        recipe: {
-          label: "Rice and chicken",
-          image: "",
-          images: {
-            LARGE: {
-              url: "",
-            },
-          },
-          ingredientLines: [],
-          calories: 200,
-          cuisineType: [],
-          totalNutrients: {
-            FAT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOCDF: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            SUGAR: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            PROCNT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOLE: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-          },
-        },
-      };
-
       const expectedActionAndMeal: EditMealAction = {
         type: MealsActionType.updateMeal,
         payload: meal,
@@ -232,48 +190,6 @@ describe("Given a editMealActionCreator function", () => {
 describe("Given a removeMealActionCreator function", () => {
   describe("When it receives a meal", () => {
     test("Then it should return an action typed 'removeMeal' and the meal as payload", () => {
-      const meal: MealStructure = {
-        recipe: {
-          label: "Rice and chicken",
-          image: "",
-          images: {
-            LARGE: {
-              url: "",
-            },
-          },
-          ingredientLines: [],
-          calories: 200,
-          cuisineType: [],
-          totalNutrients: {
-            FAT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOCDF: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            SUGAR: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            PROCNT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOLE: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-          },
-        },
-      };
-
       const expectedActionAndMeal: RemoveMealAction = {
         type: MealsActionType.removeMeal,
         payload: meal,
@@ -289,48 +205,6 @@ describe("Given a removeMealActionCreator function", () => {
 describe("Given a addFavouriteMealActionCreator function", () => {
   describe("When it receives a meal", () => {
     test("Then it should return an action typed 'addFavouriteMeal' and the meal as payload", () => {
-      const meal: MealStructure = {
-        recipe: {
-          label: "Rice and chicken",
-          image: "",
-          images: {
-            LARGE: {
-              url: "",
-            },
-          },
-          ingredientLines: [],
-          calories: 200,
-          cuisineType: [],
-          totalNutrients: {
-            FAT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOCDF: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            SUGAR: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            PROCNT: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-            CHOLE: {
-              label: "",
-              quantity: 2,
-              unit: "mg",
-            },
-          },
-        },
-      };
-
       const expectedActionAndMeal: AddFavouriteMealAction = {
         type: MealsActionType.addFavouriteMeal,
         payload: meal,
