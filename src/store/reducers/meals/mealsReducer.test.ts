@@ -9,7 +9,7 @@ describe("Given mealsReducer", () => {
       const mealsList = [
         {
           recipe: {
-            id: "",
+            uri: "",
             label: "Rice and chicken",
             image: "",
             images: {
@@ -66,7 +66,7 @@ describe("Given mealsReducer", () => {
       const currentMealsList: MealsStructure = [
         {
           recipe: {
-            id: "",
+            uri: "",
             label: "Rice and chicken",
             image: "",
             images: {
@@ -108,7 +108,7 @@ describe("Given mealsReducer", () => {
         },
         {
           recipe: {
-            id: "",
+            uri: "",
             label: "Rice and chicken",
             image: "",
             images: {

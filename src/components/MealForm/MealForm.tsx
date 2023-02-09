@@ -80,9 +80,8 @@ const MealForm = (): JSX.Element => {
             <span>mg</span>
           </div>
         </div>
-        <input
+        <textarea
           className="form-meal__ingredients"
-          type="text"
           aria-label="Ingredients"
           placeholder="Ingredients"
           required
