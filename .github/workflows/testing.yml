@@ -16,3 +16,6 @@ jobs:
 
       - name: 🧪 Testing
         run: npm test
+        env:
+          REACT_APP_URL_API: ${{ secrets.REACT_APP_URL_API }}
+          REACT_APP_URL_API_KEY: ${{ secrets.REACT_APP_URL_API_KEY }}
