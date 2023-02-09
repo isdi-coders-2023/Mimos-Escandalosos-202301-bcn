@@ -11,15 +11,7 @@ describe("Given a Header component", () => {
       expect(navBar).toBeInTheDocument();
     });
 
-    test("Then it should show 1 image", () => {
-      render(<Header />);
-
-      const imageLogo = screen.getByRole("img");
-
-      expect(imageLogo).toBeInTheDocument();
-    });
-
-    test("Then it should show a Home pagen", () => {
+    test("Then it should show 1 logo-image", () => {
       render(<Header />);
 
       const imageLogo = screen.getByRole("img");

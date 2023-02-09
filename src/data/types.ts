@@ -42,14 +42,15 @@ export interface CHOLEStructure {
 }
 
 export interface TotalNutrientsStructure {
-  FAT: FATStructure;
-  CHOCDF: CHOCDFStructure;
-  SUGAR: SUGARStructure;
-  PROCNT: PROCNTStructure;
-  CHOLE: CHOLEStructure;
+  fat: FATStructure;
+  carbs: CHOCDFStructure;
+  sugar: SUGARStructure;
+  proteins: PROCNTStructure;
+  colesterol: CHOLEStructure;
 }
 
 export interface RecipeStructure {
+  id: string;
   label: string;
   image: string;
   images: ImageStructure;
