@@ -10,7 +10,7 @@ const CardListStyled = styled.ul`
     flex-flow: row wrap;
     justify-content: space-around;
     flex-direction: row;
-    gap: 20px;
+    min-width: 500px;
   }
 
   .meal-list {
