@@ -104,8 +104,8 @@ const MealFormStyled = styled.form`
       height: 35px;
       border: none;
       border-radius: 10px;
-      background-color: #df5c37;
-      color: #fff;
+      background-color: #f7af30;
+      color: black;
     }
 
     @media (min-width: 800px) {

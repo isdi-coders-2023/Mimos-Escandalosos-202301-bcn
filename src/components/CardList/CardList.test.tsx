@@ -8,6 +8,7 @@ describe("Given a CardList component", () => {
       const meals: MealsStructure = [
         {
           recipe: {
+            id: "",
             label: "",
             image: "",
             images: { LARGE: { url: "" } },
@@ -15,11 +16,11 @@ describe("Given a CardList component", () => {
             calories: 0,
             cuisineType: [],
             totalNutrients: {
-              FAT: { label: "", quantity: 0, unit: "" },
-              CHOCDF: { label: "", quantity: 0, unit: "" },
-              SUGAR: { label: "", quantity: 0, unit: "" },
-              PROCNT: { label: "", quantity: 0, unit: "" },
-              CHOLE: { label: "", quantity: 0, unit: "" },
+              fat: { label: "", quantity: 0, unit: "" },
+              carbs: { label: "", quantity: 0, unit: "" },
+              sugar: { label: "", quantity: 0, unit: "" },
+              proteins: { label: "", quantity: 0, unit: "" },
+              colesterol: { label: "", quantity: 0, unit: "" },
             },
           },
         },

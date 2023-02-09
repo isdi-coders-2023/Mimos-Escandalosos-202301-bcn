@@ -21,7 +21,7 @@ body {
   padding: 20px;
   background-color: #fff;
   font-family: "Inter", sans-serif;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   
 }
@@ -29,7 +29,6 @@ body {
 ol, ul, li {
   list-style: none;
 }
-
 `;
 
 export default GlobalStyles;

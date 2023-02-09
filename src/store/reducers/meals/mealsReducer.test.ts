@@ -9,6 +9,7 @@ describe("Given mealsReducer", () => {
       const mealsList = [
         {
           recipe: {
+            id: "",
             label: "Rice and chicken",
             image: "",
             images: {
@@ -20,27 +21,27 @@ describe("Given mealsReducer", () => {
             calories: 200,
             cuisineType: [],
             totalNutrients: {
-              FAT: {
+              fat: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOCDF: {
+              carbs: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              SUGAR: {
+              sugar: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              PROCNT: {
+              proteins: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOLE: {
+              colesterol: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
@@ -65,6 +66,7 @@ describe("Given mealsReducer", () => {
       const currentMealsList: MealsStructure = [
         {
           recipe: {
+            id: "",
             label: "Rice and chicken",
             image: "",
             images: {
@@ -76,27 +78,27 @@ describe("Given mealsReducer", () => {
             calories: 200,
             cuisineType: [],
             totalNutrients: {
-              FAT: {
+              fat: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOCDF: {
+              carbs: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              SUGAR: {
+              sugar: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              PROCNT: {
+              proteins: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOLE: {
+              colesterol: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
@@ -106,6 +108,7 @@ describe("Given mealsReducer", () => {
         },
         {
           recipe: {
+            id: "",
             label: "Rice and chicken",
             image: "",
             images: {
@@ -117,27 +120,27 @@ describe("Given mealsReducer", () => {
             calories: 200,
             cuisineType: [],
             totalNutrients: {
-              FAT: {
+              fat: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOCDF: {
+              carbs: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              SUGAR: {
+              sugar: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              PROCNT: {
+              proteins: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOLE: {
+              colesterol: {
                 label: "",
                 quantity: 2,
                 unit: "mg",

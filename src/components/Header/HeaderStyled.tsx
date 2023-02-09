@@ -36,7 +36,7 @@ const HeaderStyled = styled.header`
     }
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 750px) {
     width: 100%;
     align-self: center;
 

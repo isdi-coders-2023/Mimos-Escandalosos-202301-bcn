@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import { useApi } from "../../hook/useApi";
+import { useApi } from "../../patateta/useApi";
 import { useContext, useEffect } from "react";
 import MealsInfoContext from "../../store/contexts/MealsInfoContext/MealsInfoContext";
 import CardList from "../CardList/CardList";
