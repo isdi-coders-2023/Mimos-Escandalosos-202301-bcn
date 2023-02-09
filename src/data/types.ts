@@ -5,55 +5,56 @@ export interface PaginationStructure {
   };
 }
 
-interface ImageStructure {
+export interface ImageStructure {
   LARGE: {
     url: string;
   };
 }
 
-interface FATStructure {
+export interface FATStructure {
   label: string;
   quantity: number;
   unit: string;
 }
 
-interface CHOCDFStructure {
+export interface CHOCDFStructure {
   label: string;
   quantity: number;
   unit: string;
 }
 
-interface SUGARStructure {
+export interface SUGARStructure {
   label: string;
   quantity: number;
   unit: string;
 }
 
-interface PROCNTStructure {
+export interface PROCNTStructure {
   label: string;
   quantity: number;
   unit: string;
 }
 
-interface CHOLEStructure {
+export interface CHOLEStructure {
   label: string;
   quantity: number;
   unit: string;
 }
 
-interface TotalNutrientsStructure {
+export interface TotalNutrientsStructure {
   FAT: FATStructure;
   CHOCDF: CHOCDFStructure;
   SUGAR: SUGARStructure;
   PROCNT: PROCNTStructure;
   CHOLE: CHOLEStructure;
 }
-interface RecipeStructure {
+
+export interface RecipeStructure {
   label: string;
   image: string;
   images: ImageStructure;
   ingredientLines: string[];
-  calories: number;
+  calories: string;
   cuisineType: string[];
   totalNutrients: TotalNutrientsStructure;
 }
@@ -63,3 +64,9 @@ export interface MealStructure {
 }
 
 export type MealsStructure = MealStructure[];
+
+export interface ApiResponseStructure {
+  count: number;
+  front: number;
+  hits: MealsStructure;
+}
