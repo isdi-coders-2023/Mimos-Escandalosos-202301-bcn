@@ -10,7 +10,7 @@ const CardList = ({ meals }: CardListProps): JSX.Element => {
   return (
     <CardListStyled className="meal-list">
       {meals.map((meal, index) => (
-        <li key={index}>
+        <li key={`meal-${index}`}>
           <Card meal={meal} />
         </li>
       ))}
