@@ -1,19 +1,23 @@
+import { MealsStructure } from "../../data/types";
 import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 
-const CardList = (): JSX.Element => {
+interface CardListProps {
+  meals: MealsStructure;
+}
+
+const CardList = ({ meals }: CardListProps): JSX.Element => {
   return (
     <CardListStyled className="meal-list">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {meals.map((meal, index) => (
+        <li key={index}>
+          <Card meal={meal} />
+        </li>
+      ))}
     </CardListStyled>
   );
 };
 
 export default CardList;
+
+//key = id

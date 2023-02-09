@@ -29,7 +29,7 @@ describe("Given a loadMealsActionCreator function", () => {
               },
             },
             ingredientLines: [],
-            calories: "200",
+            calories: 200,
             cuisineType: [],
             totalNutrients: {
               FAT: {
@@ -70,7 +70,7 @@ describe("Given a loadMealsActionCreator function", () => {
               },
             },
             ingredientLines: [],
-            calories: "125",
+            calories: 125,
             cuisineType: [],
             totalNutrients: {
               FAT: {
@@ -128,7 +128,7 @@ describe("Given an addMealActionCreator function", () => {
             },
           },
           ingredientLines: [],
-          calories: "200",
+          calories: 200,
           cuisineType: [],
           totalNutrients: {
             FAT: {
@@ -185,7 +185,7 @@ describe("Given a editMealActionCreator function", () => {
             },
           },
           ingredientLines: [],
-          calories: "200",
+          calories: 200,
           cuisineType: [],
           totalNutrients: {
             FAT: {
@@ -242,7 +242,7 @@ describe("Given a removeMealActionCreator function", () => {
             },
           },
           ingredientLines: [],
-          calories: "200",
+          calories: 200,
           cuisineType: [],
           totalNutrients: {
             FAT: {
@@ -299,7 +299,7 @@ describe("Given a addFavouriteMealActionCreator function", () => {
             },
           },
           ingredientLines: [],
-          calories: "200",
+          calories: 200,
           cuisineType: [],
           totalNutrients: {
             FAT: {
