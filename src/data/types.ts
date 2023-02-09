@@ -50,7 +50,6 @@ export interface TotalNutrientsStructure {
 }
 
 export interface RecipeStructure {
-  id: string;
   label: string;
   image: string;
   images: ImageStructure;
@@ -58,6 +57,7 @@ export interface RecipeStructure {
   calories: number;
   cuisineType: string[];
   totalNutrients: TotalNutrientsStructure;
+  uri: string;
 }
 
 export interface MealStructure {

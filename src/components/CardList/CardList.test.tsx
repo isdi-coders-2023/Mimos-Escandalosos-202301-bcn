@@ -8,7 +8,7 @@ describe("Given a CardList component", () => {
       const meals: MealsStructure = [
         {
           recipe: {
-            id: "",
+            uri: "",
             label: "",
             image: "",
             images: { LARGE: { url: "" } },
