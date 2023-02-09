@@ -5,30 +5,28 @@ interface CardProps {
   meal: MealStructure;
 }
 
-const Card = ({ meal }: CardProps): JSX.Element => {
+const Card = ({
+  meal: {
+    recipe: { calories, label, image, cuisineType },
+  },
+}: CardProps): JSX.Element => {
   return (
-    <CardStyled className="meal">
+    <CardStyled key={calories} className="meal">
       <div className="meal">
         <div>
-          <img
-            className="meal__image"
-            alt={meal.recipe.label}
-            src={meal.recipe.image}
-          />
+          <img className="meal__image" alt={label} src={image} />
         </div>
         <div className="meal__data">
           <div className="meal__data-title">
-            <h2 className="meal__title">{meal.recipe.label}</h2>
+            <h2 className="meal__title">{label}</h2>
             <i className="fa-regular fa-heart"></i>
           </div>
           <div className="meal__data-calories">
             <i className="fa-solid fa-fire"></i>
-            <span className="meal__calories">{meal.recipe.calories} Kcal</span>
+            <span className="meal__calories">{calories} Kcal</span>
           </div>
           <div className="meal__cuisine-type">
-            <span className={`meal__${meal.recipe.cuisineType[0]}`}>
-              {meal.recipe.cuisineType}
-            </span>
+            <span className={`meal__${cuisineType[0]}`}>{cuisineType}</span>
           </div>
         </div>
       </div>

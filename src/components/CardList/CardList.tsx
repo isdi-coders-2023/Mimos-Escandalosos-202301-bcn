@@ -14,10 +14,8 @@ const CardList = ({ meals }: CardListProps): JSX.Element => {
 
   return (
     <CardListStyled className="meal-list">
-      {meals.map((meal) => (
-        <li key={meal.recipe.id}>
-          <Card meal={meal} />
-        </li>
+      {meals.map((meal, index) => (
+        <Card meal={meal} />
       ))}
     </CardListStyled>
   );
