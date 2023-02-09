@@ -17,7 +17,7 @@ import {
 
 const meal: MealStructure = {
   recipe: {
-    id: "",
+    uri: "",
     label: "Rice and chicken",
     image: "",
     images: {
@@ -64,7 +64,7 @@ describe("Given a loadMealsActionCreator function", () => {
       const meals: MealsStructure = [
         {
           recipe: {
-            id: "",
+            uri: "",
             label: "Rice and chicken",
             image: "",
             images: {
@@ -106,7 +106,7 @@ describe("Given a loadMealsActionCreator function", () => {
         },
         {
           recipe: {
-            id: "",
+            uri: "",
             label: "Tomatoe salad",
             image: "",
             images: {
