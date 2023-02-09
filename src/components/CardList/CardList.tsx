@@ -7,15 +7,10 @@ interface CardListProps {
 }
 
 const CardList = ({ meals }: CardListProps): JSX.Element => {
-  meals.forEach((meal) => {
-    const idSplitted = meal.recipe.id.split("#");
-    meal.recipe.id = idSplitted[1];
-  });
-
   return (
     <CardListStyled className="meal-list">
-      {meals.map((meal, index) => (
-        <Card meal={meal} />
+      {meals.map((meal) => (
+        <Card meal={meal} key={meal.recipe.uri.slice(51)} />
       ))}
     </CardListStyled>
   );
