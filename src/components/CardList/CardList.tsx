@@ -8,8 +8,8 @@ interface CardListProps {
 
 const CardList = ({ meals }: CardListProps): JSX.Element => {
   meals.forEach((meal) => {
-    const idSplitted = meal.recipe.id.split("#");
-    meal.recipe.id = idSplitted[1];
+    const idSplitted = meal.recipe.uri.split("#");
+    meal.recipe.uri = idSplitted[1];
   });
 
   return (

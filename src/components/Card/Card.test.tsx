@@ -7,7 +7,7 @@ describe("Given a Card component function", () => {
   describe("When it renders", () => {
     const meal: MealStructure = {
       recipe: {
-        id: "",
+        uri: "",
         label: "Chorizo & mozzarella gnocchi bake",
         image: "",
         images: {
