@@ -54,7 +54,7 @@ export interface RecipeStructure {
   image: string;
   images: ImageStructure;
   ingredientLines: string[];
-  calories: string;
+  calories: number;
   cuisineType: string[];
   totalNutrients: TotalNutrientsStructure;
 }
