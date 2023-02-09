@@ -29,27 +29,27 @@ const meal: MealStructure = {
     calories: 200,
     cuisineType: [],
     totalNutrients: {
-      FAT: {
+      fat: {
         label: "",
         quantity: 2,
         unit: "mg",
       },
-      CHOCDF: {
+      carbs: {
         label: "",
         quantity: 2,
         unit: "mg",
       },
-      SUGAR: {
+      sugar: {
         label: "",
         quantity: 2,
         unit: "mg",
       },
-      PROCNT: {
+      proteins: {
         label: "",
         quantity: 2,
         unit: "mg",
       },
-      CHOLE: {
+      colesterol: {
         label: "",
         quantity: 2,
         unit: "mg",
@@ -76,27 +76,27 @@ describe("Given a loadMealsActionCreator function", () => {
             calories: 200,
             cuisineType: [],
             totalNutrients: {
-              FAT: {
+              fat: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOCDF: {
+              carbs: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              SUGAR: {
+              sugar: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              PROCNT: {
+              proteins: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOLE: {
+              colesterol: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
@@ -118,27 +118,27 @@ describe("Given a loadMealsActionCreator function", () => {
             calories: 125,
             cuisineType: [],
             totalNutrients: {
-              FAT: {
+              fat: {
                 label: "",
                 quantity: 2,
                 unit: "mg",
               },
-              CHOCDF: {
+              carbs: {
                 label: "",
                 quantity: 5,
                 unit: "mg",
               },
-              SUGAR: {
+              sugar: {
                 label: "",
                 quantity: 5,
                 unit: "mg",
               },
-              PROCNT: {
+              proteins: {
                 label: "",
                 quantity: 5,
                 unit: "mg",
               },
-              CHOLE: {
+              colesterol: {
                 label: "",
                 quantity: 5,
                 unit: "mg",
