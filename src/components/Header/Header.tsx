@@ -20,15 +20,21 @@ const Header = (): JSX.Element => {
       <nav className="header__nav-bar nav-bar">
         <div className="nav-bar__element">
           <i className="fa-solid fa-house-chimney fa-solid--active"></i>
-          <span className="nav-bar__text">Home</span>
+          <a className="nav-bar__text" href="/home">
+            Home
+          </a>
         </div>
         <div className="nav-bar__element">
           <i className="fa-solid fa-heart fa-solid--active"></i>
-          <span className="nav-bar__text">Favourites</span>
+          <a className="nav-bar__text" href="/favourites">
+            Favourites
+          </a>
         </div>
         <div className="nav-bar__element">
           <i className="fa-solid fa-plus fa-solid--active"></i>
-          <span className="nav-bar__text">Create meal</span>
+          <a className="nav-bar__text" href="/create-meal">
+            Create meal
+          </a>
         </div>
       </nav>
     </HeaderStyled>
