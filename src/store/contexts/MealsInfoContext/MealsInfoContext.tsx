@@ -7,6 +7,8 @@ interface MealsInfoContextStructure {
   dispatch: React.Dispatch<MealsAction>;
 }
 
-const MealsInfoContext = createContext({} as MealsInfoContextStructure);
+const MealsInfoContext = createContext<MealsInfoContextStructure>(
+  {} as MealsInfoContextStructure
+);
 
 export default MealsInfoContext;
