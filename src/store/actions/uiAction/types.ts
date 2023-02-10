@@ -9,6 +9,6 @@ export interface UiAction {
   payload?: unknown;
 }
 
-export interface setIsLoadingAction extends UiAction {}
+export interface SetIsLoadingAction extends UiAction {}
 
-export interface unsetIsLoadingAction extends UiAction {}
+export interface UnsetIsLoadingAction extends UiAction {}

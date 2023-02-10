@@ -1,7 +1,7 @@
 import {
-  setIsLoadingAction,
+  SetIsLoadingAction,
   UiActionType,
-  unsetIsLoadingAction,
+  UnsetIsLoadingAction,
 } from "./types";
 import {
   setIsLoadingActionCreator,
@@ -11,7 +11,7 @@ import {
 describe("Given a setIsLoadingCreator function", () => {
   describe("When it is called", () => {
     test("Then it should return an action type 'setIsLoading'", () => {
-      const expectedIsLoadingState: setIsLoadingAction = {
+      const expectedIsLoadingState: SetIsLoadingAction = {
         type: UiActionType.setIsLoading,
       };
 
@@ -25,7 +25,7 @@ describe("Given a setIsLoadingCreator function", () => {
 describe("Given a unsetLoading function", () => {
   describe("When it is called", () => {
     test("Then it should return an action type 'unsetLoading'", () => {
-      const expectedIsLoadingState: unsetIsLoadingAction = {
+      const expectedIsLoadingState: UnsetIsLoadingAction = {
         type: UiActionType.unsetIsLoading,
       };
 

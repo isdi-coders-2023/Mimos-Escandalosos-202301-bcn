@@ -1,13 +1,13 @@
 import {
-  setIsLoadingAction,
+  SetIsLoadingAction,
   UiActionType,
-  unsetIsLoadingAction,
+  UnsetIsLoadingAction,
 } from "./types";
 
-export const setIsLoadingActionCreator = (): setIsLoadingAction => ({
+export const setIsLoadingActionCreator = (): SetIsLoadingAction => ({
   type: UiActionType.setIsLoading,
 });
 
-export const unsetIsLoadingActionCreator = (): unsetIsLoadingAction => ({
+export const unsetIsLoadingActionCreator = (): UnsetIsLoadingAction => ({
   type: UiActionType.unsetIsLoading,
 });
