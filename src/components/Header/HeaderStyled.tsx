@@ -72,12 +72,17 @@ const HeaderStyled = styled.header`
       &__element {
         display: flex;
         gap: 10px;
-        align-items: center;
+      }
+
+      &__icon {
+        display: flex;
+        gap: 1.1rem;
       }
 
       &__text {
         display: flex;
         font-size: 1.2rem;
+        color: black;
       }
     }
   }
