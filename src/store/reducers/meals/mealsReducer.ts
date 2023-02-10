@@ -11,12 +11,10 @@ const mealsReducer = (
 ): MealsStructure => {
   let newMeals: MealsStructure;
 
-  switch (action.type) {
-    case MealsActionType.loadMeals:
-      newMeals = [...(action as LoadMealsAction).payload];
-      break;
-    default:
-      newMeals = currentMeals;
+  if (action.type === MealsActionType.loadMeals) {
+    newMeals = [...(action as LoadMealsAction).payload];
+  } else {
+    newMeals = currentMeals;
   }
 
   return newMeals;
