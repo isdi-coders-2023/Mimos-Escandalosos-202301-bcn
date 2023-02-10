@@ -1,5 +1,5 @@
 import { useMemo, useReducer } from "react";
-import mealsReducer from "../../reducers/meals/mealsReducer";
+import mealsReducer from "../../../store/reducers/mealsReducer/mealsReducer";
 import MealsInfoContext from "./MealsInfoContext";
 
 export interface MealsInfoContextProviderProps {

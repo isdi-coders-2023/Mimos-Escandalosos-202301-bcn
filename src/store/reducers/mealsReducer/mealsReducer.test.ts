@@ -1,5 +1,9 @@
-import { MealsStructure } from "../../../data/types";
-import { LoadMealsAction, MealsActionType } from "../../actions/types";
+import { MealsStructure } from "../../../types/types";
+import {
+  LoadMealsAction,
+  MealsActionType,
+} from "../../actions/mealsAction/types";
+
 import mealsReducer from "./mealsReducer";
 
 describe("Given mealsReducer", () => {
