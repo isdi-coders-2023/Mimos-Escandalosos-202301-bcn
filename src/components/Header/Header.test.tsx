@@ -1,10 +1,15 @@
 import { screen, render } from "@testing-library/react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./Header";
 
 describe("Given a Header component", () => {
   describe("When it renders", () => {
     test("Then it should show a navbar", () => {
-      render(<Header />);
+      render(
+        <Router>
+          <Header />
+        </Router>
+      );
 
       const navBar = screen.getByRole("navigation");
 
@@ -12,7 +17,11 @@ describe("Given a Header component", () => {
     });
 
     test("Then it should show 1 logo-image", () => {
-      render(<Header />);
+      render(
+        <Router>
+          <Header />
+        </Router>
+      );
 
       const imageLogo = screen.getByRole("img");
 
