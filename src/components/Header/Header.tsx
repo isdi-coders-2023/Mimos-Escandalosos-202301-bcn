@@ -26,27 +26,21 @@ const Header = (): JSX.Element => {
         <div className="nav-bar__element">
           <Link to="/" className="nav-bar__icon">
             <i className="fa-solid fa-house-chimney fa-solid--active"></i>
-          </Link>
-          <Link className="nav-bar__text" to="/">
-            Home
+            <span className="nav-bar__text">Home</span>
           </Link>
         </div>
 
         <div className="nav-bar__element">
-          <a href="/home" className="nav-bar__icon">
+          <a href="/Favourites" className="nav-bar__icon">
             <i className="fa-solid fa-heart fa-solid--active"></i>
-          </a>
-          <a className="nav-bar__text" href="/favourites">
-            Favourites
+            <span className="nav-bar__text">Favourites</span>
           </a>
         </div>
 
         <div className="nav-bar__element">
-          <Link to="/home" className="nav-bar__icon">
+          <Link to="/Create-Meal" className="nav-bar__icon">
             <i className="fa-solid fa-plus fa-solid--active"></i>
-          </Link>
-          <Link className="nav-bar__text" to="/Create-Meal">
-            Create meal
+            <span className="nav-bar__text">Create meal</span>
           </Link>
         </div>
       </nav>
