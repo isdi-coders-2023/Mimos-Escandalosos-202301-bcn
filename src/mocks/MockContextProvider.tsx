@@ -1,4 +1,4 @@
-import { MealsStructure } from "../data/types";
+import { MealsStructure } from "../types/types";
 import MealsInfoContext from "../store/contexts/MealsInfoContext/MealsInfoContext";
 
 interface MockContextProviderProps {

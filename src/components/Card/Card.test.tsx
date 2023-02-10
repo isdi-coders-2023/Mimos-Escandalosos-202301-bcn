@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { MealStructure } from "../../data/types";
+import { MealStructure } from "../../types/types";
 
 import Card from "./Card";
 
