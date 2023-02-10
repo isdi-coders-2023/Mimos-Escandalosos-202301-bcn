@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { MealsStructure } from "../../../types/types";
-import { MealsAction } from "../../actions/types";
+import { MealsAction } from "../../actions/mealsAction/types";
 
 interface MealsInfoContextStructure {
   meals: MealsStructure;
