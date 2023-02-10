@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeaderStyled from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
@@ -23,30 +24,24 @@ const Header = (): JSX.Element => {
       </a>
       <nav className="header__nav-bar nav-bar">
         <div className="nav-bar__element">
-          <a href="/home" className="nav-bar__icon">
+          <Link to="/" className="nav-bar__icon">
             <i className="fa-solid fa-house-chimney fa-solid--active"></i>
-          </a>
-          <a className="nav-bar__text" href="/home">
-            Home
-          </a>
+            <span className="nav-bar__text">Home</span>
+          </Link>
         </div>
 
         <div className="nav-bar__element">
-          <a href="/home" className="nav-bar__icon">
+          <a href="/Favourites" className="nav-bar__icon">
             <i className="fa-solid fa-heart fa-solid--active"></i>
-          </a>
-          <a className="nav-bar__text" href="/favourites">
-            Favourites
+            <span className="nav-bar__text">Favourites</span>
           </a>
         </div>
 
         <div className="nav-bar__element">
-          <a href="/home" className="nav-bar__icon">
+          <Link to="/Create-Meal" className="nav-bar__icon">
             <i className="fa-solid fa-plus fa-solid--active"></i>
-          </a>
-          <a className="nav-bar__text" href="/create-meal">
-            Create meal
-          </a>
+            <span className="nav-bar__text">Create meal</span>
+          </Link>
         </div>
       </nav>
     </HeaderStyled>
