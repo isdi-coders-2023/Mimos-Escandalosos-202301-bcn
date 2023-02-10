@@ -2,7 +2,8 @@ import { MealsStructure } from "../../../types/types";
 import {
   LoadMealsAction,
   MealsActionType,
-} from "../../../store/actions/mealsAction/types";
+} from "../../actions/mealsAction/types";
+
 import mealsReducer from "./mealsReducer";
 
 describe("Given mealsReducer", () => {
