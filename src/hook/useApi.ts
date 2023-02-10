@@ -1,8 +1,8 @@
 import { useCallback, useContext } from "react";
 import { ApiResponseStructure } from "../types/types";
 
-import { loadMealsActionCreator } from "../store/actions/mealsActionCreators";
 import MealsInfoContext from "../store/contexts/MealsInfoContext/MealsInfoContext";
+import { loadMealsActionCreator } from "../store/actions/mealsAction/mealsActionCreators";
 
 export const useApi = () => {
   const { dispatch } = useContext(MealsInfoContext);
