@@ -7,11 +7,8 @@ const MealFormStyled = styled.form`
   justify-content: center;
   gap: 20px;
   padding: 20px 0;
-
-  @media (min-width: 800px) {
-    width: 800px;
-    align-self: center;
-  }
+  font-size: 12px;
+  font-family: inherit;
 
   input {
     border: 2px solid #c1c1c1;
@@ -35,80 +32,74 @@ const MealFormStyled = styled.form`
       height: 35px;
     }
 
-    &__ingredients {
+    &__meal-name {
       width: 100%;
-      height: 120px;
-      border: 2px solid #c1c1c1;
-      background: #f1f1f1;
-      border-radius: 10px;
-      padding: 10px;
-      font-family: inherit;
-      resize: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__nutrients-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__nutrients {
+      width: 100%;
+      display: flex;
+      gap: 85px;
+    }
+
+    &__proteins {
+      width: 100%;
     }
   }
 
-  .nutrients {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-
-    &__kcal {
-      width: 130px;
-      height: 35px;
-    }
-
-    &__type {
-      width: 130px;
-      height: 35px;
-      border: 2px solid #c1c1c1;
-      border-radius: 10px;
-      background: #f1f1f1;
-    }
-
-    @media (min-width: 800px) {
-      &__kcal {
-        width: 350px;
-        height: 35px;
-      }
-
-      &__type {
-        width: 350px;
-        height: 35px;
-      }
-    }
-  }
-
-  .nutrients-card__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 4px;
-    width: 352px;
-
-    @media (min-width: 800px) {
-      min-width: 100%;
-    }
-  }
-
-  .info-labels {
+  .info-values {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 12px;
   }
 
-  .nutrients-info {
+  .info-unit {
     display: flex;
-    gap: 10px;
-    font-size: 12px;
-    align-items: flex-end;
+    gap: 5px;
+    align-items: center;
   }
 
-  .nutrient {
-    width: 100px;
-    height: 30px;
+  .info {
+    &__data {
+      width: 120px;
+      border: 2px solid #c1c1c1;
+      border-radius: 10px;
+      background: #f1f1f1;
+      height: 35px;
+    }
+  }
+
+  .ingredients {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__data {
+      height: 120px;
+      border: 2px solid #c1c1c1;
+      border-radius: 10px;
+      background: #f1f1f1;
+      resize: none;
+      font-family: inherit;
+      padding: 6px 6px;
+    }
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
   }
 
   .submit {
@@ -120,11 +111,6 @@ const MealFormStyled = styled.form`
       border-radius: 10px;
       background-color: #f7af30;
       color: black;
-    }
-
-    @media (min-width: 800px) {
-      min-width: 100%;
-      justify-content: flex-end;
     }
   }
 `;
