@@ -11,12 +11,14 @@ describe("Given a Form component", () => {
       expect(buttonElement).toBeInTheDocument();
     });
 
-    test("Then it should show a drop down", () => {
+    test("Then it should show an input that has an aria-label with the text 'Proteins'", () => {
+      const text = "Proteins";
+
       render(<MealForm />);
 
-      const selectTag = screen.getByRole("combobox");
+      const ariaLabel = screen.getByLabelText(text);
 
-      expect(selectTag).toBeInTheDocument();
+      expect(ariaLabel).toBeInTheDocument();
     });
   });
 });
