@@ -3,6 +3,7 @@ import { useApi } from "../../hook/useApi";
 import { useContext, useEffect } from "react";
 import MealsInfoContext from "../../store/contexts/MealsInfoContext/MealsInfoContext";
 import CardList from "../CardList/CardList";
+import MealForm from "../MealForm/MealForm";
 
 const App = (): JSX.Element => {
   const { getApiData } = useApi();
@@ -17,6 +18,7 @@ const App = (): JSX.Element => {
     <>
       <Header />
       <CardList meals={meals} />
+      <MealForm />
     </>
   );
 };
