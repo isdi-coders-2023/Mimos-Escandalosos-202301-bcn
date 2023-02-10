@@ -4,23 +4,25 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   height: 75px;
   width: 100%;
-  background-color: white;
 
-  &__mobileImage {
-    display: flex;
-    justify-content: flex-end;
+  background-color: rgb(255, 255, 255);
+
+  .header__desktop {
+    &__image {
+      display: none;
+    }
   }
 
-  .header__desktopImage {
-    display: none;
+  &__mobile {
+    display: flex;
   }
 
   .nav-bar {
     display: flex;
     gap: 30px;
-    justify-content: flex-end;
 
     &__text {
       display: none;
@@ -39,17 +41,29 @@ const HeaderStyled = styled.header`
   @media (min-width: 750px) {
     width: 100%;
     align-self: center;
+    justify-content: space-between;
+    padding: 20px 0 30px;
 
     .header {
       display: flex;
-    }
 
-    .header__desktopImage {
-      display: flex;
-    }
+      &__desktop {
+        &__link {
+          display: flex;
+        }
+        &__image {
+          display: flex;
+        }
+      }
 
-    .header__mobileImage {
-      display: none;
+      &__mobile {
+        &__link {
+          display: none;
+        }
+        &__image {
+          display: none;
+        }
+      }
     }
 
     .nav-bar {
