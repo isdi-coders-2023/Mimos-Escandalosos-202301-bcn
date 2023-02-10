@@ -36,7 +36,14 @@ const MealFormStyled = styled.form`
     }
 
     &__ingredients {
+      width: 100%;
       height: 120px;
+      border: 2px solid #c1c1c1;
+      background: #f1f1f1;
+      border-radius: 10px;
+      padding: 10px;
+      font-family: inherit;
+      resize: none;
     }
   }
 
@@ -85,11 +92,18 @@ const MealFormStyled = styled.form`
     }
   }
 
+  .info-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+  }
+
   .nutrients-info {
     display: flex;
     gap: 10px;
     font-size: 12px;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .nutrient {
