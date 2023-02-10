@@ -1,6 +1,8 @@
+import SearchBarStyled from "./SearchBarStyled";
+
 export const SearchBar = (): JSX.Element => {
   return (
-    <input
+    <SearchBarStyled
       type="text"
       aria-label="search"
       placeholder="Search meal"
