@@ -1,4 +1,4 @@
-import { MealsStructure, MealStructure } from "../../data/types";
+import { MealsStructure, MealStructure } from "../../../types/types";
 
 export enum MealsActionType {
   loadMeals,

@@ -1,4 +1,4 @@
-import { MealsStructure } from "../../data/types";
+import { MealsStructure } from "../../types/types";
 import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 

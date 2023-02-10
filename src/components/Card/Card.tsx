@@ -1,4 +1,4 @@
-import { MealStructure } from "../../data/types";
+import { MealStructure } from "../../types/types";
 import CardStyled from "./CardStyled";
 
 interface CardProps {
