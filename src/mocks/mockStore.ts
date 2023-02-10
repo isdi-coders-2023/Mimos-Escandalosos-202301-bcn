@@ -1,9 +1,9 @@
-import { MealsStructure } from "../data/types";
 import {
-  MealsAction,
   LoadMealsAction,
+  MealsAction,
   MealsActionType,
-} from "../store/actions/types";
+} from "../store/actions/mealsAction/types";
+import { MealsStructure } from "../types/types";
 
 export const dispatch: React.Dispatch<MealsAction> = jest.fn();
 export const meals: MealsStructure = [];

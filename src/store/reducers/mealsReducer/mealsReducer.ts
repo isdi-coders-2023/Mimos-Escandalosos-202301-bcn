@@ -1,9 +1,9 @@
-import { MealsStructure } from "../../../data/types";
+import { MealsStructure } from "../../../types/types";
 import {
   LoadMealsAction,
   MealsAction,
   MealsActionType,
-} from "../../actions/types";
+} from "../../../store/actions/mealsAction/types";
 
 const mealsReducer = (
   currentMeals: MealsStructure,
