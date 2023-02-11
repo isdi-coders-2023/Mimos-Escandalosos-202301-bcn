@@ -9,6 +9,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 
 import router from "./routes/router";
 import { RouterProvider } from "react-router-dom";
+import { UiContextProvider } from "./store/contexts/uiContext/UiContextProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -16,9 +17,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <MealsInfoContextProvider>
-      <RouterProvider router={router} />
-    </MealsInfoContextProvider>
+    <UiContextProvider>
+      <GlobalStyles />
+      <MealsInfoContextProvider>
+        <RouterProvider router={router} />
+      </MealsInfoContextProvider>
+    </UiContextProvider>
   </React.StrictMode>
 );
