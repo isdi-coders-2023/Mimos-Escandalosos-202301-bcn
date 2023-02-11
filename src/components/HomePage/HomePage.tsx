@@ -15,7 +15,7 @@ export const HomePage = (): JSX.Element => {
 
   return (
     <>
-      <h1>What do you want to cook?</h1>
+      <h1 aria-label="What do you want to cook?">What do you want to cook?</h1>
       <span>Enter some ingredients</span>
       <SearchBar />
       <CardList meals={meals} />
