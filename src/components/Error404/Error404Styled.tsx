@@ -24,6 +24,11 @@ const ErrorNotFoundStyled = styled.div`
       background-color: #f7af30;
       color: black;
     }
+
+    &__button:hover {
+      cursor: pointer;
+      border: 5px solid #df5c37;
+    }
   }
 
   @media (min-width: 750px) {
