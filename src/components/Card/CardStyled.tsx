@@ -46,14 +46,16 @@ const CardStyled = styled.li`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding-left: 5px;
+      padding-left: 10px;
+      width: auto;
       gap: 5px;
     }
 
     &__data-title {
       display: flex;
-      gap: 15px;
+      justify-content: space-between;
       align-items: baseline;
+      gap: 5px;
 
       i {
         color: #df5c37;
@@ -64,7 +66,7 @@ const CardStyled = styled.li`
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 14px;
+      font-size: 12px;
       padding-bottom: 10px;
       color: #403f3f;
     }
@@ -72,7 +74,7 @@ const CardStyled = styled.li`
     &__cuisine-type {
       display: flex;
       color: black;
-      font-size: 14px;
+      font-size: 11px;
     }
 
     &__mediterranean {
