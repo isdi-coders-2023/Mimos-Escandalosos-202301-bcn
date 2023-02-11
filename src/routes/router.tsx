@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../components/App/App";
+import CreatePage from "../components/CreatePage/CreatePage";
 import Error404 from "../components/Error404/Error404";
 import { HomePage } from "../components/HomePage/HomePage";
-import MealForm from "../components/MealForm/MealForm";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Create-Meal",
-        element: <MealForm />,
+        element: <CreatePage />,
       },
     ],
   },
