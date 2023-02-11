@@ -1,5 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import { MealsStructure } from "../../types/types";
+
 import CardList from "./CardList";
 
 describe("Given a CardList component", () => {
