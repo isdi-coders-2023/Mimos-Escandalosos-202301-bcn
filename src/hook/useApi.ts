@@ -8,13 +8,17 @@ export const useApi = () => {
   const { dispatch } = useContext(MealsInfoContext);
 
   const getApiData = useCallback(async () => {
-    const listResponse = await fetch(
-      `${process.env.REACT_APP_URL_API}${process.env.REACT_APP_URL_API_KEY}`
-    );
+    try {
+      const listResponse = await fetch(
+        `${process.env.REACT_APP_URL_API}${process.env.REACT_APP_URL_API_KEY}`
+      );
 
-    const result = (await listResponse.json()) as ApiResponseStructure;
+      const result = (await listResponse.json()) as ApiResponseStructure;
 
-    dispatch(loadMealsActionCreator(result.hits));
+      dispatch(loadMealsActionCreator(result.hits));
+    } catch (error) {
+      return (error as Error).message;
+    }
   }, [dispatch]);
   return { getApiData };
 };

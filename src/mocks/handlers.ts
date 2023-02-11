@@ -9,3 +9,9 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(queryParams));
   }),
 ];
+
+export const errorHandlers = [
+  rest.get(`${apiUrl}${apiKey}`, (req, rest, ctx) => {
+    return rest(ctx.status(404));
+  }),
+];
