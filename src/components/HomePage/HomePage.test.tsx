@@ -1,9 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import MockContextProvider from "../../mocks/MockContextProvider";
-import { mockStore } from "../../mocks/mockStore";
+import { mockStore, uiMockStore } from "../../mocks/mockStore";
 import { HomePage } from "./HomePage";
 
 const store = mockStore;
+const uiStore = uiMockStore;
 
 describe("Given a HomePage component", () => {
   describe("When it renders", () => {
@@ -11,7 +12,7 @@ describe("Given a HomePage component", () => {
       const text = "What do you want to cook?";
 
       render(
-        <MockContextProvider mockStore={store}>
+        <MockContextProvider mockStore={store} uiStore={uiStore}>
           <HomePage />
         </MockContextProvider>
       );
@@ -23,7 +24,7 @@ describe("Given a HomePage component", () => {
 
     test("Then it should show a list of cards", () => {
       render(
-        <MockContextProvider mockStore={store}>
+        <MockContextProvider mockStore={store} uiStore={uiStore}>
           <HomePage />
         </MockContextProvider>
       );
