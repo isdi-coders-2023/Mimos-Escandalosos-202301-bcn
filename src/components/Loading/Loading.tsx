@@ -1,5 +1,4 @@
 import LoadingStyled from "./LoadingStyled";
-import { SuperBalls } from "@uiball/loaders";
 
 const Loading = (): JSX.Element => {
   return (
@@ -8,7 +7,10 @@ const Loading = (): JSX.Element => {
       aria-label="The page is loading"
       role="dialog"
     >
-      <SuperBalls />
+      <div className="superballs">
+        <span className="superballs__dot"></span>
+        <span className="superballs__dot"></span>
+      </div>
     </LoadingStyled>
   );
 };
