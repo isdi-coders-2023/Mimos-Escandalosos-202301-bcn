@@ -3,6 +3,7 @@ import {
   MealsAction,
   MealsActionType,
 } from "../store/actions/mealsAction/types";
+import { UiAction, UiActionType } from "../store/actions/uiAction/types";
 import { MealsStructure } from "../types/types";
 
 export const dispatch: React.Dispatch<MealsAction> = jest.fn();
@@ -13,3 +14,19 @@ export const mockLoadMealsAction: LoadMealsAction = {
   type: MealsActionType.loadMeals,
   payload: meals,
 };
+
+export const isLoading = true;
+export const uiDispatch: React.Dispatch<UiAction> = jest.fn();
+export const uiMockStore = { dispatch: uiDispatch, isLoading };
+export const uiMockDispatch = jest.spyOn(uiMockStore, "dispatch");
+export const mockIsLoadingAction: UiAction = {
+  type: UiActionType.setIsLoading,
+};
+
+export const loading = false;
+export const uiDispatcher: React.Dispatch<UiAction> = jest.fn();
+export const mockLoadingAction = {
+  dispatch: uiDispatch,
+  isLoading: loading,
+};
+export const mockUiDispatcher = jest.spyOn(mockLoadingAction, "dispatch");
