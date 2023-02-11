@@ -17,7 +17,7 @@ describe("Given mealsReducer", () => {
             label: "Rice and chicken",
             image: "",
             images: {
-              LARGE: {
+              small: {
                 url: "",
               },
             },
@@ -74,7 +74,7 @@ describe("Given mealsReducer", () => {
             label: "Rice and chicken",
             image: "",
             images: {
-              LARGE: {
+              small: {
                 url: "",
               },
             },
@@ -116,7 +116,7 @@ describe("Given mealsReducer", () => {
             label: "Rice and chicken",
             image: "",
             images: {
-              LARGE: {
+              small: {
                 url: "",
               },
             },

@@ -1,18 +1,7 @@
-import { useApi } from "../../hook/useApi";
-import { useContext, useEffect } from "react";
-import MealsInfoContext from "../../store/contexts/MealsInfoContext/MealsInfoContext";
-import CardList from "../CardList/CardList";
+import Layout from "../../routes/Layout";
 
 const App = (): JSX.Element => {
-  const { getApiData } = useApi();
-
-  const { meals } = useContext(MealsInfoContext);
-
-  useEffect(() => {
-    getApiData();
-  }, [getApiData]);
-
-  return <CardList meals={meals} />;
+  return <Layout />;
 };
 
 export default App;

@@ -8,8 +8,8 @@ import "@fontsource/inter";
 import GlobalStyles from "./styles/GlobalStyles";
 
 import App from "./components/App/App";
-import Layout from "./routes/Layout";
 import MealForm from "./components/MealForm/MealForm";
+import { HomePage } from "./components/HomePage/HomePage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,11 +18,11 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <HomePage />,
       },
       {
         path: "/Create-Meal",

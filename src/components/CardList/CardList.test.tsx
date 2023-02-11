@@ -12,7 +12,7 @@ describe("Given a CardList component", () => {
             uri: "",
             label: "",
             image: "",
-            images: { LARGE: { url: "" } },
+            images: { small: { url: "" } },
             ingredientLines: [],
             calories: 0,
             cuisineType: [],
