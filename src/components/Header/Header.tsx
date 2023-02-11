@@ -35,10 +35,10 @@ const Header = (): JSX.Element => {
         </div>
 
         <div className="nav-bar__element">
-          <a href="/Favourites" className="nav-bar__icon">
+          <Link to="/Detail-Page" className="nav-bar__icon">
             <i className="fa-solid fa-heart fa-solid--active"></i>
             <span className="nav-bar__text">Favourites</span>
-          </a>
+          </Link>
         </div>
 
         <div className="nav-bar__element">
