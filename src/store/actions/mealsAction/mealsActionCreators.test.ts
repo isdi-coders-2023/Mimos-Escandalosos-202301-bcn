@@ -21,7 +21,7 @@ const meal: MealStructure = {
     label: "Rice and chicken",
     image: "",
     images: {
-      LARGE: {
+      small: {
         url: "",
       },
     },
@@ -68,7 +68,7 @@ describe("Given a loadMealsActionCreator function", () => {
             label: "Rice and chicken",
             image: "",
             images: {
-              LARGE: {
+              small: {
                 url: "",
               },
             },
@@ -110,7 +110,7 @@ describe("Given a loadMealsActionCreator function", () => {
             label: "Tomatoe salad",
             image: "",
             images: {
-              LARGE: {
+              small: {
                 url: "",
               },
             },

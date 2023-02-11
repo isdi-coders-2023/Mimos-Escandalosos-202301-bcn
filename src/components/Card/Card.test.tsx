@@ -11,7 +11,7 @@ describe("Given a Card component function", () => {
         label: "Chorizo & mozzarella gnocchi bake",
         image: "",
         images: {
-          LARGE: {
+          small: {
             url: "",
           },
         },

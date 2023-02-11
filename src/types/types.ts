@@ -6,7 +6,7 @@ export interface PaginationStructure {
 }
 
 export interface ImageStructure {
-  LARGE: {
+  small: {
     url: string;
   };
 }
