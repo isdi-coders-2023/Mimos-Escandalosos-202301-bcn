@@ -1,4 +1,5 @@
 import { screen, render } from "@testing-library/react";
+import { MealsInfoContextProvider } from "../../store/contexts/MealsInfoContext/MealsInfoContextProvider";
 import { MealsStructure } from "../../types/types";
 
 import CardList from "./CardList";
@@ -27,7 +28,11 @@ describe("Given a CardList component", () => {
         },
       ];
 
-      render(<CardList meals={meals} />);
+      render(
+        <MealsInfoContextProvider>
+          <CardList meals={meals} />
+        </MealsInfoContextProvider>
+      );
 
       const card = screen.getByRole("list");
 
