@@ -1,6 +1,6 @@
-import { MealsStructure } from "../types/types";
 import MealsInfoContext from "../store/contexts/MealsInfoContext/MealsInfoContext";
 import GlobalStyles from "../styles/GlobalStyles";
+import { MealsStructure } from "../types/types";
 
 interface MockContextProviderProps {
   children: JSX.Element | JSX.Element[];
