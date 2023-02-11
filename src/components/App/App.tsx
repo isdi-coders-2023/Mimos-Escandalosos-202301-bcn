@@ -1,4 +1,4 @@
-import Layout from "../../routes/Layout";
+import Layout from "../Layout/Layout";
 
 const App = (): JSX.Element => {
   return <Layout />;
