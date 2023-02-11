@@ -1,10 +1,11 @@
 import { renderHook, waitFor } from "@testing-library/react";
 import MockContextProvider from "../mocks/MockContextProvider";
-import { mockDispatch, mockStore } from "../mocks/mockStore";
+import { mockDispatch, mockStore, uiMockStore } from "../mocks/mockStore";
 import { useApi } from "./useApi";
 
 const dispatch = mockDispatch;
 const store = mockStore;
+const uiStore = uiMockStore;
 
 describe("Given the custom hook useApi()", () => {
   describe("When it is called", () => {
@@ -16,7 +17,7 @@ describe("Given the custom hook useApi()", () => {
       } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
-            <MockContextProvider mockStore={store}>
+            <MockContextProvider mockStore={store} uiStore={uiStore}>
               {children}
             </MockContextProvider>
           );

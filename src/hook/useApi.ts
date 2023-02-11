@@ -24,7 +24,6 @@ export const useApi = () => {
       const result = (await listResponse.json()) as ApiResponseStructure;
 
       uiDispatch(unsetIsLoadingActionCreator());
-
       dispatch(loadMealsActionCreator(result.hits));
     } catch (error) {
       return (error as Error).message;
