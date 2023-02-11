@@ -23,7 +23,7 @@ const Card = ({
           </div>
           <div className="meal__data-calories">
             <i className="fa-solid fa-fire"></i>
-            <span className="meal__calories">{calories} Kcal</span>
+            <span className="meal__calories">{Math.ceil(calories)} Kcal</span>
           </div>
           <div className="meal__cuisine-type">
             <span className={`meal__${cuisineType[0]}`}>{cuisineType}</span>
