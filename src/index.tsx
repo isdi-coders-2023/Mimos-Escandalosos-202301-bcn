@@ -10,6 +10,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 import App from "./components/App/App";
 import { HomePage } from "./components/HomePage/HomePage";
 import CreatePage from "./components/CreatePage/CreatePage";
+import Error404 from "./components/Error404/Error404";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error404 />,
     children: [
       {
         path: "/",

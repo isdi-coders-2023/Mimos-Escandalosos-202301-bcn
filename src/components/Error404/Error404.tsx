@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Error404Styled from "./Error404Styled";
 
 const Error404 = (): JSX.Element => {
@@ -15,7 +16,9 @@ const Error404 = (): JSX.Element => {
         alt="Error 404. Page not found."
         src="img/error404-desktop.webp"
       />
-      <button className="error__button">Back to home page</button>
+      <Link to="/">
+        <button className="error__button">Back to home page</button>
+      </Link>
     </Error404Styled>
   );
 };
