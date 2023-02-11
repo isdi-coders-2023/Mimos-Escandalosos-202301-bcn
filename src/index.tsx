@@ -8,8 +8,8 @@ import "@fontsource/inter";
 import GlobalStyles from "./styles/GlobalStyles";
 
 import App from "./components/App/App";
-import MealForm from "./components/MealForm/MealForm";
 import { HomePage } from "./components/HomePage/HomePage";
+import CreatePage from "./components/CreatePage/CreatePage";
 import Error404 from "./components/Error404/Error404";
 
 const root = ReactDOM.createRoot(
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Create-Meal",
-        element: <MealForm />,
+        element: <CreatePage />,
       },
     ],
   },
