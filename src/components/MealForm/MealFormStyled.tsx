@@ -54,12 +54,16 @@ const MealFormStyled = styled.form`
 
       & input,
       select {
-        width: 100px;
+        width: 120px;
       }
     }
 
     &__proteins {
       width: 100%;
+
+      & input {
+        width: 120px;
+      }
     }
   }
 
