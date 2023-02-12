@@ -10,7 +10,9 @@ const MealFormStyled = styled.form`
   font-size: 12px;
   font-family: inherit;
 
-  input {
+  input,
+  select,
+  textarea {
     border: 2px solid #c1c1c1;
     border-radius: 10px;
     background: #f1f1f1;
@@ -19,12 +21,22 @@ const MealFormStyled = styled.form`
     padding: 0 6px;
   }
 
-  input::placeholder {
-    padding: 0 6px;
+  select {
+    min-width: 185px;
   }
 
-  input:focus {
+  textarea {
+    height: 120px;
+    resize: none;
+    font-family: inherit;
+    padding: 6px 6px;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
     border-color: #edb14d;
+    outline: #edb14d;
   }
 
   .form-meal {
@@ -45,37 +57,16 @@ const MealFormStyled = styled.form`
       justify-content: space-between;
     }
 
-    &__nutrients {
-      width: 100%;
-      display: flex;
-      gap: 85px;
-    }
-
     &__proteins {
       width: 100%;
     }
   }
 
-  .info-values {
+  .info-values,
+  .info-unit {
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
-
-  .info-unit {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-  }
-
-  .info {
-    &__data {
-      width: 120px;
-      border: 2px solid #c1c1c1;
-      border-radius: 10px;
-      background: #f1f1f1;
-      height: 35px;
-    }
   }
 
   .ingredients {
@@ -83,16 +74,6 @@ const MealFormStyled = styled.form`
     display: flex;
     flex-direction: column;
     gap: 5px;
-
-    &__data {
-      height: 120px;
-      border: 2px solid #c1c1c1;
-      border-radius: 10px;
-      background: #f1f1f1;
-      resize: none;
-      font-family: inherit;
-      padding: 6px 6px;
-    }
   }
 
   .image {
@@ -105,12 +86,12 @@ const MealFormStyled = styled.form`
   .submit {
     display: flex;
     &__button {
-      width: 350px;
+      width: 275px;
       height: 35px;
       border: none;
       border-radius: 10px;
       background-color: #f7af30;
-      color: black;
+      color: #000;
     }
   }
 `;
