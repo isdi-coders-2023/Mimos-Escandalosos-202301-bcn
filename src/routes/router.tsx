@@ -4,7 +4,7 @@ import CreatePage from "../components/CreatePage/CreatePage";
 import Error404 from "../components/Error404/Error404";
 import { HomePage } from "../components/HomePage/HomePage";
 
-const router = createBrowserRouter([
+export const routes = [
   {
     path: "/",
     element: <App />,
@@ -24,6 +24,8 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 export default router;
