@@ -6,7 +6,7 @@ const LoadingStyled = styled.div`
   align-items: center;
   position: absolute;
   height: 100vh;
-  width: 350px;
+  width: 370px;
   background-color: #fff;
 
   .superballs {
