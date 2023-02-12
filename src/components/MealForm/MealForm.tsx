@@ -13,7 +13,7 @@ const MealForm = (): JSX.Element => {
           required
         />
       </div>
-      <div className="form-meal__nutrients-info">
+      <div className="form-meal__nutrients-info info">
         <div className="info-values">
           <label htmlFor="Kcal">Kcal</label>
           <input
