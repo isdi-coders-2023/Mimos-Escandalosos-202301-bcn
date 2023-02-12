@@ -21,10 +21,6 @@ const MealFormStyled = styled.form`
     padding: 0 6px;
   }
 
-  select {
-    min-width: 185px;
-  }
-
   textarea {
     height: 120px;
     resize: none;
@@ -55,6 +51,11 @@ const MealFormStyled = styled.form`
       width: 100%;
       display: flex;
       justify-content: space-between;
+
+      & input,
+      select {
+        width: 100px;
+      }
     }
 
     &__proteins {
@@ -86,7 +87,7 @@ const MealFormStyled = styled.form`
   .submit {
     display: flex;
     &__button {
-      width: 275px;
+      width: 350px;
       height: 35px;
       border: none;
       border-radius: 10px;
