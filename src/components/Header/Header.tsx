@@ -31,7 +31,7 @@ const Header = (): JSX.Element => {
         </div>
 
         <div className="nav-bar__element">
-          <Link to="/Detail-Page" className="nav-bar__icon">
+          <Link to="/Favourites" className="nav-bar__icon">
             <i className="fa-solid fa-heart fa-solid--active"></i>
             <span className="nav-bar__text">Favourites</span>
           </Link>

@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import { useApi } from "../../hook/useApi";
 import MealsInfoContext from "../../store/contexts/MealsInfoContext/MealsInfoContext";
-import CardList from "../CardList/CardList";
-import { SearchBar } from "../SearchBar/SearchBar";
+import CardList from "../../components/CardList/CardList";
+import { SearchBar } from "../../components/SearchBar/SearchBar";
 import HomePageStyled from "./HomePageStyled";
 
 export const HomePage = (): JSX.Element => {
