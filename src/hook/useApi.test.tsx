@@ -1,6 +1,8 @@
 import { renderHook, waitFor } from "@testing-library/react";
+import { errorHandlers } from "../mocks/handlers";
 import MockContextProvider from "../mocks/MockContextProvider";
 import { mockDispatch, mockStore, uiMockStore } from "../mocks/mockStore";
+import { server } from "../mocks/server";
 import { useApi } from "./useApi";
 
 const dispatch = mockDispatch;
@@ -27,6 +29,28 @@ describe("Given the custom hook useApi()", () => {
       await waitFor(async () => getApiData());
 
       expect(dispatch).toHaveBeenCalled();
+    });
+  });
+
+  describe("When the response is a 404", () => {
+    beforeEach(() => server.resetHandlers(...errorHandlers));
+    test("Then it should not invoque the dispatch", async () => {
+      const {
+        result: {
+          current: { getApiData },
+        },
+      } = renderHook(() => useApi(), {
+        wrapper: ({ children }) => {
+          return (
+            <MockContextProvider mockStore={store} uiStore={uiStore}>
+              {children}
+            </MockContextProvider>
+          );
+        },
+      });
+      await waitFor(async () => getApiData());
+
+      expect(dispatch).not.toBeCalled();
     });
   });
 });
