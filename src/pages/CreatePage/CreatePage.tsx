@@ -1,4 +1,4 @@
-import MealForm from "../MealForm/MealForm";
+import MealForm from "../../components/MealForm/MealForm";
 import CreatePageStyled from "./CreatePageStyled";
 
 const CreatePage = (): JSX.Element => {
