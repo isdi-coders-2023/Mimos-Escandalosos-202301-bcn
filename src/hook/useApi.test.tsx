@@ -5,10 +5,6 @@ import { mockDispatch, mockStore, uiMockStore } from "../mocks/mockStore";
 import { server } from "../mocks/server";
 import { useApi } from "./useApi";
 
-const dispatch = mockDispatch;
-const store = mockStore;
-const uiStore = uiMockStore;
-
 describe("Given the custom hook useApi()", () => {
   describe("When it is called", () => {
     test("Then dispatch should be invoqued", async () => {
@@ -19,7 +15,7 @@ describe("Given the custom hook useApi()", () => {
       } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
-            <MockContextProvider mockStore={store} uiStore={uiStore}>
+            <MockContextProvider mockStore={mockStore} uiStore={uiMockStore}>
               {children}
             </MockContextProvider>
           );
@@ -28,7 +24,7 @@ describe("Given the custom hook useApi()", () => {
 
       await waitFor(async () => getApiData());
 
-      expect(dispatch).toHaveBeenCalled();
+      expect(mockDispatch).toHaveBeenCalled();
     });
   });
 
@@ -42,7 +38,7 @@ describe("Given the custom hook useApi()", () => {
       } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
-            <MockContextProvider mockStore={store} uiStore={uiStore}>
+            <MockContextProvider mockStore={mockStore} uiStore={uiMockStore}>
               {children}
             </MockContextProvider>
           );
@@ -50,7 +46,7 @@ describe("Given the custom hook useApi()", () => {
       });
       await waitFor(async () => getApiData());
 
-      expect(dispatch).not.toBeCalled();
+      expect(mockDispatch).not.toBeCalled();
     });
   });
 });
