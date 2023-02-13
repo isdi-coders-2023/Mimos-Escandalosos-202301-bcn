@@ -21,11 +21,11 @@ export const useApi = () => {
         `${process.env.REACT_APP_URL_API}${process.env.REACT_APP_URL_API_KEY}`
       );
 
-      const result = (await listResponse.json()) as ApiResponseStructure;
+      const { hits } = (await listResponse.json()) as ApiResponseStructure;
 
       uiDispatch(unsetIsLoadingActionCreator());
-      dispatch(loadMealsActionCreator(result.hits));
-    } catch (error) {
+      dispatch(loadMealsActionCreator(hits));
+    } catch (error: unknown) {
       return (error as Error).message;
     }
   }, [dispatch, uiDispatch]);
