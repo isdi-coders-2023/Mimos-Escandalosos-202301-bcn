@@ -8,7 +8,7 @@ import { MealsStructure } from "../types/types";
 
 export const dispatch: React.Dispatch<MealsAction> = jest.fn();
 export const meals: MealsStructure = [];
-export const mockStore = { dispatch, meals: [] as MealsStructure };
+export const mockStore = { dispatch, meals: [] };
 export const mockDispatch = jest.spyOn(mockStore, "dispatch");
 export const mockLoadMealsAction: LoadMealsAction = {
   type: MealsActionType.loadMeals,
@@ -22,11 +22,3 @@ export const uiMockDispatch = jest.spyOn(uiMockStore, "dispatch");
 export const mockIsLoadingAction: UiAction = {
   type: UiActionType.setIsLoading,
 };
-
-export const loading = false;
-export const uiDispatcher: React.Dispatch<UiAction> = jest.fn();
-export const mockLoadingAction = {
-  dispatch: uiDispatch,
-  isLoading: loading,
-};
-export const mockUiDispatcher = jest.spyOn(mockLoadingAction, "dispatch");
